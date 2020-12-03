@@ -1,6 +1,9 @@
+import './reset.css';
+import Nav from './components/global/Nav/Nav';
+
 function App() {
   return (
-    <h1>DoggyStore</h1>
+    <Nav />
   );
 }
 
