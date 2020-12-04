@@ -1,31 +1,22 @@
 import './Nav.css';
+import NavItem from '../NavItem/NavItem';
 
-function Nav() {
+function Nav({titulo, action}) {
+    // const {titulo} = props;
+
     return (
         <header>
             <div className="container">
-                <h1>DoggyStore</h1>
+                <h1>{titulo}</h1>
 
                 <nav>
                     <ul>
-                        <li>
-                            <a href="#">Camas</a>
-                        </li>
-                        <li>
-                            <a href="#">Comederos y bebederos</a>
-                        </li>
-                        <li>
-                            <a href="#">Elementos de paseo</a>
-                        </li>
-                        <li>
-                            <a href="#">Elementos de viaje</a>
-                        </li>
-                        <li>
-                            <a href="#">Juguetes</a>
-                        </li>
-                        <li>
-                            <a href="#">Ropa</a>
-                        </li>
+                        <NavItem text="Camas" url="https://www.google.com" />
+                        <NavItem text="Comederos y bebederos" />
+                        <NavItem text="Elementos de paseo" />
+                        <NavItem text="Elementos de viaje" />
+                        <NavItem text="Juguetes" />
+                        <NavItem text="Ropa" />
                     </ul>
                 </nav>
             </div>
