@@ -1,16 +1,16 @@
-.headerCart {
+.navCart {
   position: absolute;
   right: 0;
   bottom: 0;
   cursor: pointer;
 }
 
-.headerCart svg {
+.navCart svg {
   color: var(--blanco);
   font-size: 2rem;
 }
 
-.headerCart span {
+.navCart span {
   display: flex;
   justify-content: center;
   align-items: center;

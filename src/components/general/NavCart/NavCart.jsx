@@ -1,13 +1,13 @@
-import './HeaderCart.css';
+import './NavCart.css';
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 
-const HeaderCart = () => {
+const NavCart = () => {
     return (
-        <div className="headerCart">
+        <div className="navCart">
             <AiOutlineShoppingCart />
             <span>0</span>
         </div>
     )
 }
 
-export default HeaderCart;
+export default NavCart;

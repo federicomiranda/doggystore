@@ -1,6 +1,6 @@
 import './Nav.css';
 import NavItem from '../NavItem/NavItem';
-import HeaderCart from '../HeaderCart/HeaderCart';
+import NavCart from '../NavCart/NavCart';
 
 function Nav({titulo}) {
     return (
@@ -17,7 +17,7 @@ function Nav({titulo}) {
                     <NavItem text="Ropa" />
                 </ul>
                 
-                <HeaderCart />
+                <NavCart />
             </div>
         </nav>
     )

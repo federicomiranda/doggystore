@@ -1,9 +1,9 @@
-import ProductCard from '../ProductCard/ProductCard';
-import './ListOfProducts.css';
+import ProductCard from '../../general/ProductCard/ProductCard';
+import './FeaturedProducts.css';
 
-const ListOfProducts = () => {
+const FeaturedProducts = () => {
     return (
-        <section className="listOfProducts">
+        <section className="featuredProducts">
             <div className="container">
                 <h2>Productos destacados</h2>
 
@@ -18,4 +18,4 @@ const ListOfProducts = () => {
     )
 }
 
-export default ListOfProducts;
+export default FeaturedProducts;
