@@ -1,0 +1,27 @@
+.headerCart {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.headerCart svg {
+  color: var(--blanco);
+  font-size: 2rem;
+}
+
+.headerCart span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 1.3rem;
+  height: 1.3rem;
+  font-size: 0.8rem;
+  position: absolute;
+  right: -0.5rem;
+  top: -0.5rem;
+  background: var(--blanco);
+  line-height: 0;
+  color: var(--color-principal);
+}

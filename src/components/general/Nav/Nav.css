@@ -1,16 +1,16 @@
-header {
+nav {
   background: var(--color-principal);
   padding: 2rem 0;
 }
 
-header .container {
+nav .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
 
-header h1 {
+nav h1 {
   color: var(--blanco);
   font-family: "Fredoka One", cursive;
   font-size: 3.5rem;
@@ -18,29 +18,29 @@ header h1 {
   margin-bottom: 2rem;
 }
 
-header nav ul {
+nav ul {
   display: flex;
 }
 
-header nav ul li {
+nav ul li {
   margin: 0 2rem;
 }
 
-header nav ul li:first-child {
+nav ul li:first-child {
   margin-left: 0;
 }
 
-header nav ul li:last-child {
+nav ul li:last-child {
   margin-right: 0;
 }
 
-header nav ul li a {
+nav ul li a {
   color: var(--blanco);
   font-size: 1.5rem;
   position: relative;
 }
 
-header nav ul li a::after {
+nav ul li a::after {
   content: "";
   display: block;
   width: 100%;
@@ -52,6 +52,6 @@ header nav ul li a::after {
   transition: opacity 0.2s;
 }
 
-header nav ul li a:hover::after {
+nav ul li a:hover::after {
   opacity: 1;
 }
