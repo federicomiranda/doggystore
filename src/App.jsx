@@ -1,15 +1,11 @@
 import './reset.css';
-import Nav from './components/general/Nav/Nav';
+import NavAndWidgetCart from './components/general/NavAndWidgetCart/NavAndWidgetCart';
 import FeaturedProducts from './components/Home/FeaturedProducts/FeaturedProducts';
 
 function App() {
-  const cartelSaludo = () => {
-    alert('Hola mundo');
-  }
-
   return (
     <>
-      <Nav titulo="DoggyStore" action={cartelSaludo} />
+      <NavAndWidgetCart />
       <FeaturedProducts />
     </>
   );

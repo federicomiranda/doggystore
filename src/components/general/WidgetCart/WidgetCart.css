@@ -1,0 +1,11 @@
+.widgetCart {
+  height: 100vh;
+  width: 20%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: var(--blanco);
+  z-index: 2;
+  box-shadow: -0.3rem 0 0.3rem rgba(0, 0, 0, 0.2);
+  display: none;
+}
