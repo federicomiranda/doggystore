@@ -1,9 +1,7 @@
 import './Nav.css';
 import NavItem from '../NavItem/NavItem';
 
-function Nav({titulo, action}) {
-    // const {titulo} = props;
-
+function Nav({titulo}) {
     return (
         <header>
             <div className="container">

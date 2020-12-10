@@ -1,0 +1,34 @@
+.productCard {
+  background: var(--blanco);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: box-shadow 0.5s;
+}
+
+.productCard:hover {
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.25);
+}
+
+.productCard img {
+  width: 100%;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.productCard div {
+  padding: 1rem;
+  text-align: center;
+}
+
+.productCard div h3 {
+  color: var(--text);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.productCard div p {
+  color: var(--text);
+  font-size: 1.6rem;
+  font-weight: 600;
+}

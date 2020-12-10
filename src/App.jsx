@@ -1,6 +1,6 @@
 import './reset.css';
 import Nav from './components/general/Nav/Nav';
-import ProductCard from './components/general/ProductCard/ProductCard';
+import ListOfProducts from './components/general/ListOfProducts/ListOfProducts';
 
 function App() {
   const cartelSaludo = () => {
@@ -10,10 +10,7 @@ function App() {
   return (
     <>
       <Nav titulo="DoggyStore" action={cartelSaludo} />
-      <ProductCard titulo="Producto 1" precio="500" />
-      <ProductCard titulo="Producto 2" precio="300" />
-      <ProductCard titulo="Producto 3" precio="750" />
-      <ProductCard titulo="Producto 4" precio="100" />
+      <ListOfProducts />
     </>
   );
 }
