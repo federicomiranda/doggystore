@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import './reset.css';
 import NavAndWidgetCart from './components/general/NavAndWidgetCart/NavAndWidgetCart';
 import FeaturedProducts from './components/Home/FeaturedProducts/FeaturedProducts';
@@ -6,16 +6,16 @@ import FeaturedProducts from './components/Home/FeaturedProducts/FeaturedProduct
 function App() {
   const [nombre, setNombre] = useState('');
 
-  const actualizarNombre = (e) => {
-    setNombre(e.target.value);
-  }
+  useEffect(() => {
+    console.log('Hola mundo');
+  }, [nombre])
 
   return (
     <>
       <NavAndWidgetCart />
       <FeaturedProducts />
-      <p>{nombre}</p>
-      <input type="text" value={nombre} onChange={actualizarNombre} />
+
+      <button onClick={() => setNombre('Fede')}>Cambiar nombre</button>
     </>
   );
 }
