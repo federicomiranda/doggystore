@@ -2,7 +2,7 @@ import './Nav.css';
 import NavItem from '../NavItem/NavItem';
 import NavCart from '../NavCart/NavCart';
 
-function Nav({titulo}) {
+function Nav({titulo, action}) {
     return (
         <nav>
             <div className="container">
@@ -17,7 +17,7 @@ function Nav({titulo}) {
                     <NavItem text="Ropa" />
                 </ul>
                 
-                <NavCart />
+                <NavCart action={action} />
             </div>
         </nav>
     )

@@ -1,8 +1,8 @@
 import './WidgetCart.css';
 
-const WidgetCart = () => {
+const WidgetCart = ({show}) => {
     return (
-        <div className="widgetCart">
+        <div className={`widgetCart ${show ? 'open' : 'close'}`}>
             <p>Soy un widget</p>
         </div>
     )
