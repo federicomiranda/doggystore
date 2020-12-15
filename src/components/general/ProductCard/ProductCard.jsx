@@ -2,12 +2,16 @@ import {useState} from 'react';
 import './ProductCard.css';
 
 const ProductCard = ({titulo, precio}) => {
-    const [qty, setQty] = useState(0);
+    const [qty, setQty] = useState(1);
 
     const handleClickResta = () => {
-        if(qty) {
+        if(qty > 1) {
             setQty(qty - 1);
         }
+    }
+
+    const onAdd = () => {
+        alert(`Agregaste ${qty} productos al carrito`);
     }
 
     return (
@@ -17,7 +21,7 @@ const ProductCard = ({titulo, precio}) => {
                 <h3>{titulo}</h3>
                 <div className="qty">
                     <button 
-                        disabled={!qty ? 'disabled' : null } 
+                        disabled={qty === 1 ? 'disabled' : null } 
                         onClick={handleClickResta}
                     >
                         -
@@ -26,6 +30,8 @@ const ProductCard = ({titulo, precio}) => {
                     <button onClick={() => setQty(qty + 1)}>+</button>
                 </div>
                 <p>${precio}</p>
+
+                <button onClick={onAdd}>Agregar al carrito</button>
             </div>
         </article>
     )
