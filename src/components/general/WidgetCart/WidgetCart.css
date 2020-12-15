@@ -1,18 +1,19 @@
 .widgetCart {
   height: 100vh;
-  width: 20%;
+  width: 30%;
   position: fixed;
-  right: 0;
+  right: -30%;
   top: 0;
   background: var(--blanco);
   z-index: 2;
   box-shadow: -0.3rem 0 0.3rem rgba(0, 0, 0, 0.2);
+  transition: right 0.5s;
 }
 
 .close {
-  display: none;
+  right: -30%;
 }
 
 .open {
-  display: block;
+  right: 0;
 }
