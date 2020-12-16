@@ -1,18 +1,67 @@
+import {useState, useEffect} from 'react';
 import ProductCard from '../../general/ProductCard/ProductCard';
 import './FeaturedProducts.css';
 
 const FeaturedProducts = () => {
+    const [items, setItems] = useState([]);
+    // Hagan de cuenta que esta constante es una API
+    const products = [
+        {
+            id: 1,
+            titulo: 'Producto 1',
+            precio: 500,
+        },
+        {
+            id: 2,
+            titulo: 'Producto 2',
+            precio: 300,
+        },
+        {
+            id: 3,
+            titulo: 'Producto 3',
+            precio: 600,
+        },
+        {
+            id: 4,
+            titulo: 'Producto 4',
+            precio: 247,
+        },
+    ]
+
+    const getProducts = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(products);
+        }, 5000)
+    })
+
+    useEffect(() => {
+        getProducts.then(rta => setItems(rta));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     return (
         <section className="featuredProducts">
             <div className="container">
-                <h2>Productos destacados</h2>
+                {
+                    items.length ?
+                    <>
+                        <h2>Productos destacados</h2>
 
-                <ul>
-                    <li><ProductCard titulo="Producto 1" precio="500" /></li>
-                    <li><ProductCard titulo="Producto 2" precio="300" /></li>
-                    <li><ProductCard titulo="Producto 3" precio="750" /></li>
-                    <li><ProductCard titulo="Producto 4" precio="100" /></li>
-                </ul>
+                        <ul>
+                            {
+                                items.map((item, index) => (
+                                    <li key={index}>
+                                        <ProductCard 
+                                            titulo={item.titulo} 
+                                            precio={item.precio} 
+                                        />
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                    </> :
+                    <p className="cargando">Cargando items...</p>
+                }
             </div>
         </section>
     )

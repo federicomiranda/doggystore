@@ -17,3 +17,8 @@
 .featuredProducts ul li {
   width: 20%;
 }
+
+.cargando {
+  text-align: center;
+  font-size: 3rem;
+}
