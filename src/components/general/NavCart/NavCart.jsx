@@ -1,11 +1,11 @@
 import './NavCart.css';
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 
-const NavCart = ({action}) => {
+const NavCart = ({action, qty}) => {
     return (
         <div className="navCart" onClick={action}>
             <AiOutlineShoppingCart />
-            <span>0</span>
+            <span>{qty}</span>
         </div>
     )
 }

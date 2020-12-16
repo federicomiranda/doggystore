@@ -34,10 +34,24 @@ const FeaturedProducts = () => {
         }, 5000)
     })
 
+    const getProducstFromDB = async () => {
+        try {
+            const result = await getProducts;
+            setItems(result);
+        } catch(error) {
+            alert('No podemos mostrar los productos en este momento');
+        }
+    }
+
     useEffect(() => {
-        getProducts.then(rta => setItems(rta));
+        getProducstFromDB();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [])
+
+    // useEffect(() => {
+    //     getProducts.then(rta => setItems(rta));
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, []);
 
     return (
         <section className="featuredProducts">
