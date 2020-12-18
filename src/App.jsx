@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <NavAndWidgetCart />
-      {sectionToShow('Home')}
+      {sectionToShow('Category')}
     </>
   );
 }
