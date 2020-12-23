@@ -6,27 +6,27 @@ function Nav({titulo, action}) {
     const menuItems = [
         {
             texto: 'Camas',
-            ruta: '',
+            ruta: '/category/camas',
         },
         {
             texto: 'Comederos y bebederos',
-            ruta: '',
+            ruta: '/category/comederos-y-bebederos',
         },
         {
             texto: 'Elementos de paseo',
-            ruta: '',
+            ruta: '/category/elementos-de-paseo',
         },
         {
             texto: 'Elementos de viaje',
-            ruta: '',
+            ruta: '/category/elementos-de-viaje',
         },
         {
             texto: 'Juguetes',
-            ruta: '',
+            ruta: '/category/juguetes',
         },
         {
             texto: 'Ropa',
-            ruta: '',
+            ruta: '/category/ropa',
         },
     ]
 
@@ -39,7 +39,7 @@ function Nav({titulo, action}) {
 
                 <ul>
                     {
-                     menuItems.map((seccion, index) => <NavItem key={index} text={seccion.texto} />)   
+                     menuItems.map((seccion, index) => <NavItem key={index} text={seccion.texto} url={seccion.ruta} />)   
                     }
                 </ul>
                 

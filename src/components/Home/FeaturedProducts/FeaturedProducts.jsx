@@ -31,7 +31,7 @@ const FeaturedProducts = () => {
     const getProducts = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(products);
-        }, 5000)
+        }, 500)
     })
 
     const getProducstFromDB = async () => {

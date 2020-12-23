@@ -1,6 +1,8 @@
+import {NavLink} from 'react-router-dom';
+
 const NavItem = ({text, url = "#"}) => (
     <li>
-        <a href={url}>{text}</a>
+        <NavLink to={url} activeClassName="active">{text}</NavLink>
     </li>
 )
 
