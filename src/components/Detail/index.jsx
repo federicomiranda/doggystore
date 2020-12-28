@@ -32,7 +32,7 @@ const Detail = () => {
                     <ProductDetail item={product} />
 
                     <section>
-                        acá van a ir otros productos recomendados
+                        El id del producto seleccionado es: {id}
                     </section>
                 </div> : 
                 <p>Cargando producto...</p>

@@ -66,6 +66,7 @@ const FeaturedProducts = () => {
                                 items.map((item, index) => (
                                     <li key={index}>
                                         <ProductCard 
+                                            id={item.id}
                                             titulo={item.titulo} 
                                             precio={item.precio} 
                                         />

@@ -30,7 +30,7 @@ function Nav({titulo, action}) {
         },
     ]
 
-    const qty = 0;
+    const qty = 1;
 
     return (
         <nav>

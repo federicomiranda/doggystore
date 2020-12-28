@@ -1,16 +1,23 @@
 import {useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {Switch, useParams} from 'react-router-dom';
 
 const Category = () => {
     const {category_name} = useParams();
 
-    useEffect(() => {
-        console.log(category_name);
-    }, [category_name])
+    const queCategoriaEs = (cat) => {
+        switch(cat) {
+            case 'camas': return <p className="hola">Estoy en camas</p>;
+            case 'juguetes': return <p>Estoy en juguetes</p>;
+            case 'ropa': return <p>Estoy en ropa</p>
+            default: return <p>la categoría no existe</p>
+        }
+    }
 
     return (
         <>
-            <h1>{category_name}</h1>
+            {
+               queCategoriaEs(category_name) 
+            }
         </>
     )
 }
