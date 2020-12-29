@@ -1,0 +1,7 @@
+.free_shipping {
+  background: var(--text);
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--blanco);
+  font-size: 1.2rem;
+}

@@ -1,8 +1,16 @@
-import FeaturedProducts from './FeaturedProducts/FeaturedProducts'
+import FeaturedProducts from './FeaturedProducts'
+import Slider from './Slider'
+import CategoriesGrid from './CategoriesGrid'
+import Newsletter from './Newsletter'
 
 const Home = () => {
     return (
-        <FeaturedProducts />
+        <>
+            <Slider />
+            <FeaturedProducts />
+            <CategoriesGrid />
+            <Newsletter />
+        </>
     )
 }
 

@@ -1,0 +1,33 @@
+.slider_img {
+  width: 100%;
+  height: auto;
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.slider .slick-dots {
+  bottom: 1.5rem;
+}
+
+.slider .slick-dots li {
+  width: auto;
+  height: auto;
+  margin: 0 1rem;
+}
+
+.slider .slick-dots li button {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+}
+
+.slider .slick-dots li.slick-active button {
+  background: var(--blanco);
+}
+
+.slider .slick-dots li button:before {
+  display: none;
+}

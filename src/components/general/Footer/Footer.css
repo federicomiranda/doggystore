@@ -1,0 +1,14 @@
+footer {
+  background: var(--color-principal);
+  padding: 1rem 0;
+}
+
+footer p {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+footer p strong {
+  font-weight: 500;
+}

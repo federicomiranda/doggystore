@@ -2,7 +2,6 @@
   background: var(--blanco);
   border-radius: 1.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
-  cursor: pointer;
   transition: box-shadow 0.5s;
 }
 
@@ -33,14 +32,8 @@
   font-weight: 600;
 }
 
-.productCard div .qty {
-  width: 100%;
-  margin: 1.5rem 0;
-  display: flex;
-}
-
-.productCard div .qty button {
-  width: 20%;
+.productCard div a {
+  display: block;
   border: none;
   padding: 0.5rem;
   outline: none;
@@ -49,19 +42,10 @@
   border-radius: 1rem;
   color: var(--blanco);
   font-size: 1.5rem;
+  margin-top: 1rem;
+  transition: background 0.5s;
 }
 
-.productCard div .qty button:disabled {
-  background: #ddd;
-  cursor: no-drop;
-}
-
-.productCard div .qty input {
-  width: 60%;
-  text-align: center;
-  border: none;
-  padding: 0.5rem;
-  text-align: center;
-  font-size: 1.8rem;
-  outline: none;
+.productCard div a:hover {
+  background: #0758af;
 }

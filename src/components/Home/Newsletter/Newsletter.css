@@ -1,0 +1,45 @@
+.newsletter {
+  background: var(--text);
+  padding: 4rem 0;
+}
+
+.newsletter h2 {
+  text-align: center;
+  color: var(--blanco);
+  font-size: 2.5rem;
+}
+
+.newsletter p {
+  text-align: center;
+  color: var(--blanco);
+  font-size: 1.4rem;
+}
+
+.newsletter form {
+  width: 60%;
+  margin: 2rem auto 0;
+  display: flex;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.newsletter form input {
+  width: 70%;
+  padding: 1.5rem;
+  border: none;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.newsletter form input[type="submit"] {
+  width: 30%;
+  background: var(--color-principal);
+  color: var(--blanco);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+.newsletter form input[type="submit"]:hover {
+  background: #0758af;
+}
