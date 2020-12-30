@@ -1,6 +1,7 @@
 import './Nav.css';
 import NavItem from '../NavItem/NavItem';
 import NavCart from '../NavCart/NavCart';
+import {Link} from 'react-router-dom';
 
 function Nav({titulo, action}) {
     const menuItems = [
@@ -35,7 +36,7 @@ function Nav({titulo, action}) {
     return (
         <nav>
             <div className="container">
-                <h1>{titulo}</h1>
+                <h1><Link to="/">{titulo}</Link></h1>
 
                 <ul>
                     {

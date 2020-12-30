@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
-import ProductDetail from './ProductDetail';
 import {useParams} from 'react-router-dom';
+import ProductDetail from './ProductDetail';
+import Comments from './Comments';
 
 const Detail = () => {
     const {id} = useParams();
@@ -11,7 +12,7 @@ const Detail = () => {
             resolve({
                 id: id, 
                 nombre: "Producto de prueba",
-                foto: "http://placehold.it/350x400",
+                foto: "http://placehold.it/150x100",
                 descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam laboriosam deleniti neque! Explicabo aspernatur accusantium ex provident natus, nam neque nesciunt eaque iure dolore, architecto maiores corrupti deserunt totam. Veniam.",
                 precio: 400
             })
@@ -30,10 +31,7 @@ const Detail = () => {
                 product ?
                 <div className="container">
                     <ProductDetail item={product} />
-
-                    <section>
-                        El id del producto seleccionado es: {id}
-                    </section>
+                    <Comments />
                 </div> : 
                 <p>Cargando producto...</p>
             }

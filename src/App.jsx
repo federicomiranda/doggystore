@@ -1,4 +1,5 @@
 import './reset.css';
+import {useEffect} from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import NavAndWidgetCart from './components/general/NavAndWidgetCart/NavAndWidgetCart';
 import FreeShipping from './components/general/FreeShipping/';
@@ -11,6 +12,18 @@ import Checkout from './components/Checkout';
 import Footer from './components/general/Footer';
 
 function App() {
+  // const windowResize = (e) => {
+  //   console.log(e);
+  // }
+
+  // useEffect(() => {
+  //   window.addEventListener('resize', windowResize);
+
+  //   return () => {
+  //     window.removeEventListener('resize', windowResize);
+  //   }
+  // }, [])
+
   return (
     <BrowserRouter>
       <FreeShipping />

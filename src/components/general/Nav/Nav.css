@@ -11,11 +11,14 @@ nav .container {
 }
 
 nav h1 {
-  color: var(--blanco);
   font-family: "Fredoka One", cursive;
   font-size: 3.5rem;
   letter-spacing: 0.2rem;
   margin-bottom: 2rem;
+}
+
+nav h1 a {
+  color: var(--blanco);
 }
 
 nav ul {
