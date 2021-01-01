@@ -1,0 +1,27 @@
+.products {
+  width: 100%;
+}
+
+.products > div {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.products > div svg {
+  font-size: 2.5rem;
+  color: var(--color-principal);
+}
+
+.products_list.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2rem;
+}
+
+.products_list.list {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 2rem;
+}

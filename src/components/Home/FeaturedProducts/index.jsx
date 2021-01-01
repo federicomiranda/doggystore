@@ -1,37 +1,14 @@
 import {useState, useEffect} from 'react';
 import ProductCard from '../../general/ProductCard/ProductCard';
 import './FeaturedProducts.css';
+import {products} from '../../../products';
 
 const FeaturedProducts = () => {
     const [items, setItems] = useState([]);
-    // Hagan de cuenta que esta constante es una API
-    const products = [
-        {
-            id: 1,
-            titulo: 'Producto 1',
-            precio: 500,
-        },
-        {
-            id: 2,
-            titulo: 'Producto 2',
-            precio: 300,
-        },
-        {
-            id: 3,
-            titulo: 'Producto 3',
-            precio: 600,
-        },
-        {
-            id: 4,
-            titulo: 'Producto 4',
-            precio: 247,
-        },
-    ]
 
     const getProducts = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(products);
-        }, 500)
+        const outstandingProducts = products.filter(item => item.outstanding);
+        resolve(outstandingProducts);
     })
 
     const getProducstFromDB = async () => {
@@ -48,11 +25,6 @@ const FeaturedProducts = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    // useEffect(() => {
-    //     getProducts.then(rta => setItems(rta));
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, []);
-
     return (
         <section className="featuredProducts">
             <div className="container">
@@ -67,8 +39,10 @@ const FeaturedProducts = () => {
                                     <li key={index}>
                                         <ProductCard 
                                             id={item.id}
-                                            titulo={item.titulo} 
-                                            precio={item.precio} 
+                                            img={item.img}
+                                            titulo={item.title} 
+                                            precio={item.price} 
+                                            categoria={item.category}
                                         />
                                     </li>
                                 ))

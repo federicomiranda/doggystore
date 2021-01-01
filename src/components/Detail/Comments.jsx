@@ -1,8 +1,6 @@
 import {useState} from 'react';
 
 const Comments = () => {
-    // const [comment, setComment] = useState('');
-    // const [name, setName] = useState('');
     const [formData, setFormData] = useState({
         name: '',
         comment: '',
@@ -19,14 +17,6 @@ const Comments = () => {
             alert('El comentario debe tener como mínimo 10 caracteres');
         }
     }
-
-    // const handleChangeComment = e => {
-    //     setFormData({...formData, comment: e.target.value});
-    // }
-    
-    // const handleChangeName = e => {
-    //     setFormData({...formData, name: e.target.value});
-    // }
 
     const handleChangeFormData = e => {
         setFormData({...formData, [e.target.name]: e.target.value});

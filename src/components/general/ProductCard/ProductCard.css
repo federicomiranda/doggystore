@@ -3,6 +3,8 @@
   border-radius: 1.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.5s;
+  height: 100%;
+  position: relative;
 }
 
 .productCard:hover {
@@ -22,8 +24,9 @@
 
 .productCard div h3 {
   color: var(--text);
-  font-size: 2.1rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  min-height: 46px;
 }
 
 .productCard div p {
@@ -41,11 +44,36 @@
   background: var(--color-principal);
   border-radius: 1rem;
   color: var(--blanco);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-top: 1rem;
   transition: background 0.5s;
 }
 
 .productCard div a:hover {
   background: #0758af;
+}
+
+.productCard.list {
+  display: flex;
+  align-items: center;
+}
+
+.productCard.list img {
+  width: 20%;
+  border-bottom-left-radius: 1.5rem;
+  border-top-right-radius: 0;
+}
+
+.productCard.list div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 3fr 1fr 2fr;
+  flex: 1;
+}
+
+.productCard.list div h3 {
+  margin: 0;
+  min-height: auto;
+  text-align: left;
+  font-size: 2rem;
 }

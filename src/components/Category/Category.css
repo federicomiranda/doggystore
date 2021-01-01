@@ -1,0 +1,14 @@
+.category {
+  min-height: 100vh;
+  padding: 4rem;
+}
+
+.category h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--color-secundario);
+}
+
+.category h2::first-letter {
+  text-transform: uppercase;
+}

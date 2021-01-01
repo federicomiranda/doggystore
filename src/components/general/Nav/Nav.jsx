@@ -7,27 +7,19 @@ function Nav({titulo, action}) {
     const menuItems = [
         {
             texto: 'Camas',
-            ruta: '/category/camas',
+            ruta: '/camas',
         },
         {
             texto: 'Comederos y bebederos',
-            ruta: '/category/comederos-y-bebederos',
+            ruta: '/comederos-y-bebederos',
         },
         {
             texto: 'Elementos de paseo',
-            ruta: '/category/elementos-de-paseo',
-        },
-        {
-            texto: 'Elementos de viaje',
-            ruta: '/category/elementos-de-viaje',
+            ruta: '/elementos-de-paseo',
         },
         {
             texto: 'Juguetes',
-            ruta: '/category/juguetes',
-        },
-        {
-            texto: 'Ropa',
-            ruta: '/category/ropa',
+            ruta: '/juguetes',
         },
     ]
 
