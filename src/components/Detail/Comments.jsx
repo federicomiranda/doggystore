@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import './Comments.css';
 
 const Comments = () => {
     const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ const Comments = () => {
     }
 
     return (
-        <section>
+        <section className="comments">
             <h3>Comentarios</h3>
 
             <ul>
@@ -31,16 +32,17 @@ const Comments = () => {
                     totalComments.map((comment, index) => {
                         return (
                         <li key={index}>
-                            <p>{comment.name}</p>
-                            <p>{comment.comment}</p>
+                            <p className="nombre">{comment.name}</p>
+                            <p className="texto">{comment.comment}</p>
                         </li>
                     )})
                 }
             </ul>
 
             <form onSubmit={handleSubmitComment}>
-                <input type="text" name="name" value={formData.name} onChange={handleChangeFormData} />
-                <textarea name="comment" cols="30" rows="10" value={formData.comment} onChange={handleChangeFormData} />
+                <h4>Nuevo comentario</h4>
+                <input type="text" placeholder="Nombre" name="name" value={formData.name} onChange={handleChangeFormData} />
+                <textarea name="comment" placeholder="Comentario" cols="30" rows="10" value={formData.comment} onChange={handleChangeFormData} />
                 <input type="submit" value="Enviar comentario" />
             </form>
         </section>

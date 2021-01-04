@@ -109,7 +109,7 @@ export const products = [
     "id": 9,
     "category": "comederos-y-bebederos",
     "title": "Comedero Plástico De Boca",
-    "description": "",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores tenetur facere nostrum autem rem mollitia sequi labore assumenda minima esse maxime debitis cum optio delectus, consequuntur reiciendis, tempora in.",
     "img": "211004-A.webp",
     "size": [
       "el más grande"

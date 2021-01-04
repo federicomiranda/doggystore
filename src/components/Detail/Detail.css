@@ -1,0 +1,25 @@
+.breadcrum {
+  margin: 2rem 0;
+  display: flex;
+}
+
+.breadcrum li {
+  text-transform: lowercase;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.breadcrum li::first-letter {
+  text-transform: uppercase;
+}
+
+.breadcrum li:first-child::after {
+  content: ">";
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.breadcrum li a {
+  color: var(--text);
+  text-decoration: underline;
+}

@@ -1,22 +1,17 @@
 import {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import ProductDetail from './ProductDetail';
 import Comments from './Comments';
+import {products} from '../../products';
+import './Detail.css';
 
 const Detail = () => {
     const {id} = useParams();
     const [product, setProduct] = useState(null);
 
     const getProduct = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve({
-                id: id, 
-                nombre: "Producto de prueba",
-                foto: "http://placehold.it/150x100",
-                descripcion: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam laboriosam deleniti neque! Explicabo aspernatur accusantium ex provident natus, nam neque nesciunt eaque iure dolore, architecto maiores corrupti deserunt totam. Veniam.",
-                precio: 400
-            })
-        }, 500);
+        const selectedProduct = products.filter(item => item.id === parseInt(id));
+        resolve(selectedProduct[0]);
     });
 
     useEffect(() => {
@@ -30,6 +25,15 @@ const Detail = () => {
             {
                 product ?
                 <div className="container">
+                    <ol className="breadcrum">
+                        <li>
+                            <Link to={`/${product.category}`}>{product.category.split('-').join(' ')}</Link>
+                        </li>
+                        <li>
+                            {product.title}
+                        </li>
+                    </ol>
+                    
                     <ProductDetail item={product} />
                     <Comments />
                 </div> : 

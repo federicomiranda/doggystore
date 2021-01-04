@@ -1,0 +1,76 @@
+.comments {
+  margin-top: 3rem;
+  padding: 3rem 0;
+  border-top: 1px solid var(--color-principal);
+}
+
+.comments h3 {
+  text-align: center;
+  color: var(--color-principal);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.comments ul {
+  width: 50%;
+  margin: auto;
+}
+
+.comments ul li {
+  padding: 1rem;
+  border-bottom: 1px solid var(--text);
+  border-right: 1px solid var(--text);
+  margin: 2rem 0;
+}
+
+.comments ul li .nombre {
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-transform: lowercase;
+  color: var(--text);
+}
+
+.comments ul li .nombre::first-letter {
+  text-transform: uppercase;
+}
+
+.comments ul li .texto {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.comments form {
+  width: 50%;
+  margin: 3rem auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments form h4 {
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.comments form input,
+.comments form textarea {
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  outline: none;
+  border: 1px solid var(--text);
+  resize: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.comments form textarea {
+  padding: 1rem;
+}
+
+.comments form input[type="submit"] {
+  background: var(--color-principal);
+  border: 1px solid var(--color-principal);
+  padding: 1rem 0;
+  color: var(--blanco);
+  cursor: pointer;
+}
