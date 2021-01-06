@@ -1,11 +1,15 @@
+import {useContext} from 'react';
 import './NavCart.css';
-import {AiOutlineShoppingCart} from 'react-icons/ai'
+import {AiOutlineShoppingCart} from 'react-icons/ai';
+import {Store} from '../../../store';
 
-const NavCart = ({action, qty}) => {
+const NavCart = ({action}) => {
+    const [data, setData] = useContext(Store);
+
     return (
         <div className="navCart" onClick={action}>
             <AiOutlineShoppingCart />
-            <span>{qty}</span>
+            <span>{data.cantidad}</span>
         </div>
     )
 }

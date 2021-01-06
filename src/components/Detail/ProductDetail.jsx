@@ -1,7 +1,11 @@
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import './ProductDetail.css';
+import {Store} from '../../store';
+import {useHistory} from 'react-router-dom';
 
 const ProductDetail = ({item}) => {
+    const history = useHistory();
+    const [data, setData] = useContext(Store);
     const [qty, setQty] = useState(1);	
 
     const handleClickResta = () => {	
@@ -10,9 +14,17 @@ const ProductDetail = ({item}) => {
         }	
     }	
 
-    const onAdd = () => {	
-        alert(`Agregaste ${qty} productos al carrito`);	
+    const onAdd = () => {
+        setData({
+            ...data, 
+            cantidad: data.cantidad + qty,
+            items: [...data.items, item],
+        });
+        history.push('/cart');
+        // alert(`Agregaste ${qty} productos al carrito`);	
     }
+    
+    console.log(data);
 
     return (
         <article className="product">

@@ -23,8 +23,6 @@ function Nav({titulo, action}) {
         },
     ]
 
-    const qty = 1;
-
     return (
         <nav>
             <div className="container">
@@ -36,9 +34,7 @@ function Nav({titulo, action}) {
                     }
                 </ul>
                 
-                {
-                    !!qty && <NavCart action={action} qty={qty} />
-                }
+                <NavCart action={action} />
             </div>
         </nav>
     )

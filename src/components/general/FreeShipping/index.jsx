@@ -1,9 +1,13 @@
+import {useContext} from 'react';
 import './FreeShipping.css';
+import {Store} from '../../../store';
 
 const FreeShipping = () => {
+    const [data, setData] = useContext(Store);
+
     return (
         <div className="free_shipping">
-            <p>Envío gratis desde $4500 | 3 cuotas sin interés</p>
+            <p>Envío gratis desde ${data.freeShipping} | {data.cuotas} cuotas sin interés</p>
         </div>
     )
 }
