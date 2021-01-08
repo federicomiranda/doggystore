@@ -1,9 +1,11 @@
+import {memo} from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Slider.css';
 
 const HomeSlider = () => {
+    console.log('Render de slider');
     const settings = {
         dots: true,
         infinite: true,
@@ -29,4 +31,4 @@ const HomeSlider = () => {
     )
 }
 
-export default HomeSlider;
+export default memo(HomeSlider);

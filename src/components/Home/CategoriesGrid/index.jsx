@@ -1,7 +1,9 @@
+import {memo} from 'react';
 import './CategoriesGrid.css';
 import {Link} from 'react-router-dom';
 
 const CategoriesGrid = () => {
+    console.log('Render de grilla de categorias');
     return (
         <section className="categories_grid">
             <div className="container">
@@ -40,4 +42,4 @@ const CategoriesGrid = () => {
     )
 }
 
-export default CategoriesGrid;
+export default memo(CategoriesGrid);

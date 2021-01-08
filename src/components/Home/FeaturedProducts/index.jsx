@@ -1,10 +1,12 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, memo} from 'react';
 import ProductCard from '../../general/ProductCard/ProductCard';
 import './FeaturedProducts.css';
 import {products} from '../../../products';
 
 const FeaturedProducts = () => {
     const [items, setItems] = useState([]);
+
+    console.log('Render de productos destacados');
 
     const getProducts = new Promise((resolve, reject) => {
         const outstandingProducts = products.filter(item => item.outstanding);
@@ -56,4 +58,4 @@ const FeaturedProducts = () => {
     )
 }
 
-export default FeaturedProducts;
+export default memo(FeaturedProducts);
