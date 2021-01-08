@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import './Slider.css';
 
 const HomeSlider = () => {
-    console.log('Render de slider');
     const settings = {
         dots: true,
         infinite: true,

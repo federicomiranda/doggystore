@@ -1,13 +1,14 @@
-import {useContext} from 'react';
 import './FreeShipping.css';
-import {Store} from '../../../store';
+import {useSelector} from 'react-redux';
 
 const FreeShipping = () => {
-    const [data, setData] = useContext(Store);
+    // const freeShipping = useSelector(state => state.freeShipping)
+    // const cuotas = useSelector(state => state.cuotas)
+    const {freeShipping, cuotas} = useSelector(state => state);
 
     return (
         <div className="free_shipping">
-            <p>Envío gratis desde ${data.freeShipping} | {data.cuotas} cuotas sin interés</p>
+            <p>Envío gratis desde ${freeShipping} | {cuotas} cuotas sin interés</p>
         </div>
     )
 }

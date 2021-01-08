@@ -6,8 +6,6 @@ import {products} from '../../../products';
 const FeaturedProducts = () => {
     const [items, setItems] = useState([]);
 
-    console.log('Render de productos destacados');
-
     const getProducts = new Promise((resolve, reject) => {
         const outstandingProducts = products.filter(item => item.outstanding);
         resolve(outstandingProducts);

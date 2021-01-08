@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import './reset.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import NavAndWidgetCart from './components/general/NavAndWidgetCart/NavAndWidgetCart';
@@ -10,18 +9,15 @@ import Error404 from './components/general/Error404';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import Footer from './components/general/Footer';
-import {Store} from './store';
+import reducer from './reducer';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 function App() {
-  const [data, setData] = useState({
-    items: [],
-    cantidad: 0,
-    freeShipping: 4000,
-    cuotas: 3,
-  })
-
   return (
-    <Store.Provider value={[data, setData]}>
+    <Provider store={store}>
       <BrowserRouter>
         <FreeShipping />
         <NavAndWidgetCart />
@@ -49,7 +45,7 @@ function App() {
 
         <Footer />
       </BrowserRouter>
-    </Store.Provider>
+    </Provider>
   );
 }
 

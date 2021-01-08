@@ -1,11 +1,11 @@
-import {useState, useContext} from 'react';
+import {useState} from 'react';
 import './ProductDetail.css';
-import {Store} from '../../store';
 import {useHistory} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
 
 const ProductDetail = ({item}) => {
+    const dispatch = useDispatch();
     const history = useHistory();
-    const [data, setData] = useContext(Store);
     const [qty, setQty] = useState(1);	
 
     const handleClickResta = () => {	
@@ -15,16 +15,11 @@ const ProductDetail = ({item}) => {
     }	
 
     const onAdd = () => {
-        setData({
-            ...data, 
-            cantidad: data.cantidad + qty,
-            items: [...data.items, item],
-        });
+        dispatch({type: 'SUMAR_ITEMS_CONTADOR', payload: qty})
+        dispatch({type: 'AGREGAR_ITEM', payload: {item, cantidad: qty}})
         history.push('/cart');
         // alert(`Agregaste ${qty} productos al carrito`);	
     }
-    
-    console.log(data);
 
     return (
         <article className="product">

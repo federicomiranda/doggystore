@@ -2,7 +2,6 @@ import {memo} from 'react';
 import './Newsletter.css';
 
 const Newsletter = () => {
-    console.log('Render de newsletter');
     return (
         <section className="newsletter">
             <div className="container">
