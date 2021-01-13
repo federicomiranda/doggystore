@@ -2,22 +2,27 @@ import {useEffect, useState} from 'react';
 import {useParams, Link} from 'react-router-dom';
 import ProductDetail from './ProductDetail';
 import Comments from './Comments';
-import {products} from '../../products';
 import './Detail.css';
+import {getFirestore} from '../../db';
 
 const Detail = () => {
     const {id} = useParams();
     const [product, setProduct] = useState(null);
-
-    const getProduct = new Promise((resolve, reject) => {
-        const selectedProduct = products.filter(item => item.id === parseInt(id));
-        resolve(selectedProduct[0]);
-    });
+    const db = getFirestore();
 
     useEffect(() => {
-        getProduct
-        .then(response => setProduct(response))
-        .catch(error => console.log(error));
+        db.collection('productos').doc(id).get()
+        .then(doc => {
+            if(doc.exists) {
+                setProduct(doc.data());
+            }
+        })
+        .catch(e => console.log(e));
+
+        // db.collection('productos').doc(id)
+        // .onSnapshot(function(doc) {
+        //     setProduct(doc.data());
+        // });
     }, []);
 
     return (
