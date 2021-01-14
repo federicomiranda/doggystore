@@ -18,6 +18,7 @@ function App() {
     cantidad: 0,
     freeShipping: 4000,
     cuotas: 3,
+    precioTotal: 0,
   })
 
   return (
