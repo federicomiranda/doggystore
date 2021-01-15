@@ -14,7 +14,7 @@ const Detail = () => {
         db.collection('productos').doc(id).get()
         .then(doc => {
             if(doc.exists) {
-                setProduct(doc.data());
+                setProduct({id: doc.id, data: doc.data()});
             }
         })
         .catch(e => console.log(e));
@@ -32,10 +32,10 @@ const Detail = () => {
                 <div className="container">
                     <ol className="breadcrum">
                         <li>
-                            <Link to={`/${product.category}`}>{product.category.split('-').join(' ')}</Link>
+                            <Link to={`/${product.data.category}`}>{product.data.category.split('-').join(' ')}</Link>
                         </li>
                         <li>
-                            {product.title}
+                            {product.data.title}
                         </li>
                     </ol>
                     

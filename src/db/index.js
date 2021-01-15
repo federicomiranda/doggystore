@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import '@firebase/firestore';
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyB_yxyb_VNb38Ov0lP46ioNUkWd3zsXNPg",
+  apiKey: process.env.API_KEY,
   authDomain: "doggystore-7e5f7.firebaseapp.com",
   projectId: "doggystore-7e5f7",
   storageBucket: "doggystore-7e5f7.appspot.com",
