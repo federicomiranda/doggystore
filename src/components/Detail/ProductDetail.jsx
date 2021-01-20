@@ -1,4 +1,4 @@
-import {useState, useContext} from 'react';
+import {useState, useContext, useEffect} from 'react';
 import './ProductDetail.css';
 import {Store} from '../../store';
 import {useHistory} from 'react-router-dom';
@@ -23,6 +23,7 @@ const ProductDetail = ({item}) => {
             items: [...data.items, {item: item.data, cantidad: qty}],
             precioTotal: data.precioTotal + (item.data.price * qty)
         });
+
         history.push('/cart');
         // alert(`Agregaste ${qty} productos al carrito`);	
     }

@@ -1,12 +1,25 @@
-import {useContext} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import {Store} from '../../store';
 import './Cart.css';
 import {Link} from 'react-router-dom';
 
 const Cart = () => {
     const [data, setData] = useContext(Store);
+    const [prods, setProds] = useState([]);
 
-    console.log(data);
+    useEffect(() => {
+        if(data.items.length) {
+            const productos = JSON.stringify(data.items);
+            localStorage.setItem('productos', productos);
+        }
+
+        if(localStorage.getItem('productos')) {
+            setProds(JSON.parse(localStorage.getItem('productos')));
+        } else {
+            setProds(data.items);   
+        }
+
+    }, [data.items])
 
     return (
         <section className="cart">
@@ -14,8 +27,8 @@ const Cart = () => {
 
             <ul>
                 {
-                    data.items.map(item => (
-                        <li>
+                    prods.map(item => (
+                        <li key={item.id}>
                             <img src={`/products/${item.item.img}`} alt=""/>
                             <div>
                                 <h2>{item.item.title}</h2>
